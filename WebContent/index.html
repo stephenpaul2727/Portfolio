@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head><title>StephWorks</title></head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+
+<style>
+p.navfont{
+font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size:15px;
+margin-top:20px;
+position: fixed;
+color:#5b5b5b;
+}
+div.col-md-1{
+height:55px;
+}
+div.navbar {
+width:100%;
+height:57px;
+position: fixed;
+top:0;
+background-color:#262423;
+}
+div.bodydiv {
+width:95%;
+border: 1px solid #a7a8aa;
+height:1000px;
+margin: auto;
+margin-top:25px;
+background-color:#262423;
+}
+div.profilediv{
+margin:auto;
+font-family:Lucida Sans Unicode", "Lucida Grande", sans-serif;
+height:auto;
+padding: 10px;
+padding-top:5%;
+}
+imgcircle{
+border-radius:30%;}
+body{
+background: -moz-linear-gradient(270deg, rgba(90,98,145,1) 0%, rgba(0,128,128,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(90,98,145,1)), color-stop(100%, rgba(0,128,128,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(270deg, rgba(90,98,145,1) 0%, rgba(0,128,128,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(270deg, rgba(90,98,145,1) 0%, rgba(0,128,128,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(270deg, rgba(90,98,145,1) 0%, rgba(0,128,128,1) 100%); /* ie10+ */
+background: linear-gradient(180deg, rgba(90,98,145,1) 0%, rgba(0,128,128,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5A6291', endColorstr='#008080',GradientType=0 ); /* ie6-9 */
+}
+</style>
+
+<body class="body">
+<div ng-app ="app1" ng-controller="navbarcontroller" class="navbar">
+<a href="index.html"><div class="col-md-2"><img align="middle" src="images/mylogo.png" class="img-responsive" width="200px" height="50px"/></div></a>
+<a href=""><div class ="col-md-1" ng-style="barColor0" ng-click="#" ng-mouseenter="changeColor0(true)" ng-mouseleave="changeColor0(false)"><p align="center"  style="margin-left: 10px;" class ="navfont">THEME</p></div></a>
+<a href=""><div class ="col-md-1" ng-style="barColor1" ng-click="#" ng-mouseenter="changeColor1(true)" ng-mouseleave="changeColor1(false)"><p align="center" class="navfont">CONTACT</p></div></a>
+<div class="col-md-7"></div>
+<a href=""><div class="col-md-1" ng-style="barColor2" ng-click="#" ng-mouseenter="changeColor2(true)" ng-mouseleave="changeColor2(false)" ><p align="center" style="margin-left: 10px;" class="navfont">LOGIN</p></div></a>
+</div>
+
+<div id="app2" class="profilediv" ng-controller="profileController">
+<p style="margin-left:31%;font-size:35px;">{{name}}</p>
+<img style="margin-left: 38%" src="{{imagePath}}" class="img-circle"/>
+</div>
+
+<div class="bodydiv"></div>
+<script>
+var navang = angular.module("app1",[]);
+navang.controller("navbarcontroller",function($scope){
+	$scope.changeColor0=function(bool){
+		if(bool===true)
+			{$scope.barColor0={'background-color':'#eae2de'};
+			
+			}
+		else if(bool===false)
+			{$scope.barColor0={'background-color':'#262423'};
+			}
+		};
+
+		$scope.changeColor1=function(bool){
+			if(bool===true)
+				{$scope.barColor1={'background-color':'#eae2de'};
+				
+				}
+			else if(bool===false)
+				{$scope.barColor1={'background-color':'#262423'};
+				}
+			};
+			$scope.changeColor2=function(bool){
+				if(bool===true)
+					{$scope.barColor2={'background-color':'#eae2de'};
+					
+					}
+				else if(bool===false)
+					{$scope.barColor2={'background-color':'#262423'};
+					}
+				};
+});
+
+</script>
+<script>
+var bodyang = angular.module("profileApp",[]);
+bodyang.controller("profileController",function($scope){
+$scope.imagePath="images/stevepic.jpg";
+$scope.name="STEPHEN PAUL ADITHELA";	
+});
+angular.bootstrap(document.getElementById("app2"),['profileApp']);
+</script>
+
+</body>
+</html>
