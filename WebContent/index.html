@@ -8,11 +8,12 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link href='//fonts.googleapis.com/css?family=Bungee Hairline' rel='stylesheet'>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script>
 $(window).scroll(function() {
 
-    if ($(this).scrollTop()>0)
+    if ($(this).scrollTop()>20)
      {
         $('.navbar').fadeOut();
      }
@@ -25,6 +26,12 @@ $(window).scroll(function() {
 
 
 <style>
+p.bodyfont{
+    font-family: 'Bungee Hairline';
+    color:#efefef;
+    font-size:35px;
+
+}
 p.navfont{
 font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size:15px;
@@ -32,8 +39,10 @@ margin-top:20px;
 position: fixed;
 color:#5b5b5b;
 }
+
 div.col-md-1{
 height:55px;
+margin-left:0px;
 }
 div.navbar {
 width:100%;
@@ -43,12 +52,17 @@ top:0;
 background-color:#262423;
 }
 div.bodydiv {
-width:95%;
+width:100%;
 border: 1px solid #a7a8aa;
 height:1000px;
 margin: auto;
 margin-top:25px;
 background-color:#262423;
+}
+ul.dropdown-menu{
+background-color:#000000;
+margin-top:58px;
+margin-left:85%;
 }
 div.profilediv{
 margin:auto;
@@ -72,48 +86,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5A6291', end
 
 <body class="body">
 <div ng-app ="app1" ng-controller="navbarcontroller" class="navbar">
-<a href="index.html"><div class="col-md-2"><img align="middle" src="images/mylogo.png" class="img-responsive" width="200px" height="50px"/></div></a>
-<a href=""><div class ="col-md-1" ng-style="barColor0" ng-click="#" ng-mouseenter="changeColor0(true)" ng-mouseleave="changeColor0(false)"><p align="center"  style="margin-left: 10px;" class ="navfont">THEME</p></div></a>
-<a href=""><div class ="col-md-1" ng-style="barColor1" ng-click="#" ng-mouseenter="changeColor1(true)" ng-mouseleave="changeColor1(false)"><p align="center" class="navfont">CONTACT</p></div></a>
-<div class="col-md-7"></div>
-<a href=""><div class="col-md-1" ng-style="barColor2" ng-click="#" ng-mouseenter="changeColor2(true)" ng-mouseleave="changeColor2(false)" ><p align="center" style="margin-left: 10px;" class="navfont">LOGIN</p></div></a>
+<a href="#"><div class="col-md-11" ><p style="margin-left:33%;   font-family: 'Bungee Hairline';font-size: 22px;
+;font-size:35px;font-color:#efefef">{{name}}</p></div></a>
+<div class="dropdown">
+<div class="col-md-1" ng-init="imagename='images/second.gif'" data-toggle="dropdown" ng-click="changeColor2(true)"><img src="{{imagename}}"/></div>
+  <ul class="dropdown-menu">
+    <li><a href="#" ng-click="changeColor2(false)">HTML</a></li>
+    <li><a href="#" ng-click="changeColor2(false)">CSS</a></li>
+    <li><a href="#" ng-click="changeColor2(false)">JavaScript</a></li>
+  </ul></div>
 </div>
 
 <div id="app2" class="profilediv" ng-controller="profileController">
-<p style="margin-left:31%;font-size:35px;">{{name}}</p>
 <img style="margin-left: 38%" src="{{imagePath}}" class="img-circle"/>
 </div>
 
-<div class="bodydiv"></div>
+<div class="bodydiv">
+<p class="bodyfont">Hello World!</p>
+
+</div>
 <script>
 var navang = angular.module("app1",[]);
 navang.controller("navbarcontroller",function($scope){
-	$scope.changeColor0=function(bool){
-		if(bool===true)
-			{$scope.barColor0={'background-color':'#eae2de'};
-			
-			}
-		else if(bool===false)
-			{$scope.barColor0={'background-color':'#262423'};
-			}
-		};
+	$scope.name="STEPHEN PAUL ADITHELA";	
 
-		$scope.changeColor1=function(bool){
-			if(bool===true)
-				{$scope.barColor1={'background-color':'#eae2de'};
-				
-				}
-			else if(bool===false)
-				{$scope.barColor1={'background-color':'#262423'};
-				}
-			};
 			$scope.changeColor2=function(bool){
 				if(bool===true)
-					{$scope.barColor2={'background-color':'#eae2de'};
+					{$scope.imagename="images/first.gif";
 					
 					}
 				else if(bool===false)
-					{$scope.barColor2={'background-color':'#262423'};
+					{$scope.imagename = "images/second.gif";
 					}
 				};
 
