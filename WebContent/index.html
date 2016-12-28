@@ -9,6 +9,19 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+$(window).scroll(function() {
+
+    if ($(this).scrollTop()>0)
+     {
+        $('.navbar').fadeOut();
+     }
+    else
+     {
+      $('.navbar').fadeIn();
+     }
+ });
+</script>
 
 
 <style>
@@ -103,6 +116,8 @@ navang.controller("navbarcontroller",function($scope){
 					{$scope.barColor2={'background-color':'#262423'};
 					}
 				};
+
+	
 });
 
 </script>
