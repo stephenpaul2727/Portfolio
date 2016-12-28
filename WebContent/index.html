@@ -9,7 +9,9 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <link href='//fonts.googleapis.com/css?family=Bungee Hairline' rel='stylesheet'>
+<link href='//fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
 <script>
 $(window).scroll(function() {
 
@@ -29,11 +31,12 @@ $(window).scroll(function() {
 p.bodyfont{
     font-family: 'Bungee Hairline';
     color:#efefef;
-    font-size:35px;
+    font-size:15px;
+    margin-left:15px;
+    margin-top:5px;
 
 }
 p.navfont{
-font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size:15px;
 margin-top:20px;
 position: fixed;
@@ -54,13 +57,13 @@ background-color:#262423;
 div.bodydiv {
 width:100%;
 border: 1px solid #a7a8aa;
-height:1000px;
+height:auto;
 margin: auto;
-margin-top:25px;
 background-color:#262423;
 }
 ul.dropdown-menu{
-background-color:#000000;
+width:200px;
+background-color:#d0d8e5;
 margin-top:58px;
 margin-left:85%;
 }
@@ -86,13 +89,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5A6291', end
 
 <body class="body">
 <div ng-app ="app1" ng-controller="navbarcontroller" class="navbar">
-<a href="#"><div class="col-md-11" ><p style="margin-left:33%;   font-family: 'Bungee Hairline';font-size: 22px;
-;font-size:35px;font-color:#efefef">{{name}}</p></div></a>
+<div class="col-md-11" ><p style="margin-left:40%; margin-top:16px;font-family: 'Aldrich';font-size:20px;color:#bac2d1;">{{name}}</p></div>
 <div class="dropdown">
 <div class="col-md-1" ng-init="imagename='images/second.gif'" data-toggle="dropdown" ng-click="changeColor2(true)"><img src="{{imagename}}"/></div>
   <ul class="dropdown-menu">
-    <li><a href="#" ng-click="changeColor2(false)">HTML</a></li>
-    <li><a href="#" ng-click="changeColor2(false)">CSS</a></li>
+    <li style="font-color:#efefef";"><a  style="font-color:#efefef";" href="#" ng-click="changeColor2(false)">HTML</a></li>
+    <li style="color:#efefef;"><a href="#" ng-click="changeColor2(false)">CSS</a></li>
     <li><a href="#" ng-click="changeColor2(false)">JavaScript</a></li>
   </ul></div>
 </div>
@@ -102,7 +104,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5A6291', end
 </div>
 
 <div class="bodydiv">
-<p class="bodyfont">Hello World!</p>
+<p class="bodyfont">System.out.println("Hello World! I am a programmer.");</p>
+<p class="bodyfont">&nbsp</p>
+<p class="bodyfont">if(you.equals("programmer")&nbsp &nbsp{</p>
+<p class="bodyfont">&nbsp</p>
+<p class="bodyfont">AlertDialog.Builder mes = new AlertDialog.Builder(this);</p>
+<p class="bodyfont">&nbsp</p>
+<p class="bodyfont">mes.setMessage("We are Friends!");&nbsp &nbsp}</p>
+<p class="bodyfont">&nbsp</p>
+<p class="bodyfont">String [] myLikes&nbsp &nbsp =&nbsp &nbsp {'coding','coffee','gaming','travel'};</p>
+<p class="bodyfont">&nbsp</p>
+<p class="bodyfont">String myFavProgLang &nbsp &nbsp =&nbsp &nbsp "JAVA";</p>
+<p class="bodyfont">&nbsp</p>
+<p class="bodyfont">String myFavProject&nbsp &nbsp =&nbsp &nbsp<a href="">Medion</a></p>
+<p class="bodyfont">&nbsp</p>
+<p class="bodyfont">String myResume&nbsp &nbsp =&nbsp &nbsp <a href="">resume</a></p>
+<p class="bodyfont">&nbsp</p>
+<p class="bodyfont">String myGit&nbsp &nbsp =&nbsp &nbsp <a href="https://github.com/stephenpaul2727">GIT</a></p>
+
+
+
+
 
 </div>
 <script>
