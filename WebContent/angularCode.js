@@ -1,6 +1,6 @@
 var bodyang = angular.module("profileApp",[]);
 bodyang.controller("profileController",function($scope){
-$scope.imagePath="images/stevepic.jpg";
+$scope.imagePath="images/spic.jpg";
 $scope.name="STEPHEN PAUL ADITHELA";	
 });
 
