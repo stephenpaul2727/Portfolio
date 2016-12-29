@@ -9,28 +9,20 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <link href='//fonts.googleapis.com/css?family=Bungee Hairline' rel='stylesheet'>
+<link href='//fonts.googleapis.com/css?family=Lekton' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href='//fonts.googleapis.com/css?family=Maven Pro' rel='stylesheet'>
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
-<script>
-$(window).scroll(function() {
-
-    if ($(this).scrollTop()>20)
-     {
-        $('.navbar').fadeOut();
-     }
-    else
-     {
-      $('.navbar').fadeIn();
-     }
- });
-</script>
-
+<script src="plainJavaScript.js"></script>
 
 <style>
 p.bodyfont{
-    font-family: 'Bungee Hairline';
-    color:#efefef;
+    font-family: 'Lekton';
+    color:#959faf;
     font-size:15px;
     margin-left:15px;
     margin-top:5px;
@@ -74,8 +66,60 @@ height:auto;
 padding: 10px;
 padding-top:5%;
 }
+div.Education{
+width:100%;
+height:250px;
+font-family:'Maven Pro';
+color:#5d5f60;
+background-color:#e3e6ea;
+border: 1px solid #a7a8aa;
+}
+div.Education2{
+width:100%;
+height:220px;
+font-family:'Maven Pro';
+color:#5d5f60;
+background-color:#e3e6ea;
+border: 1px solid #a7a8aa;
+}
+div.Work{
+width:100%;
+height:570px;;
+font-family:'Maven Pro';
+color:#dbd5d2;
+background-color:#505160;
+border: 1px solid #a7a8aa;
+}
+div.Project1{
+width:100%;
+height:570px;;
+font-family:'Maven Pro';
+color:#5d5f60;
+background-color:#e3e6ea;
+border: 1px solid #a7a8aa;
+}
+div.univimage{
+margin-left:10px;
+float:left;}
+div.projdetails{
+width;100%;
+height:250px;
+
+}
 imgcircle{
 border-radius:30%;}
+div.edudetails{
+float:left;
+padding-bottom: 100%;
+margin-bottom: -100%;
+border-radius: 10px;
+border: 2px solid #949aa3;
+padding: 20px; 
+margin-left:20px;
+color:#000000;
+width: 90%;
+height: auto;  
+background-color:#949aa3;}
 body{
 background: -moz-linear-gradient(270deg, rgba(90,98,145,1) 0%, rgba(0,128,128,1) 100%); /* ff3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(90,98,145,1)), color-stop(100%, rgba(0,128,128,1))); /* safari4+,chrome */
@@ -91,11 +135,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5A6291', end
 <div ng-app ="app1" ng-controller="navbarcontroller" class="navbar">
 <div class="col-md-11" ><p style="margin-left:40%; margin-top:16px;font-family: 'Aldrich';font-size:20px;color:#bac2d1;">{{name}}</p></div>
 <div class="dropdown">
-<div class="col-md-1" ng-init="imagename='images/second.gif'" data-toggle="dropdown" ng-click="changeColor2(true)"><img src="{{imagename}}"/></div>
+<div class="col-md-1" style="margin-top:8px;" ng-init="imagename='images/up.png'" data-toggle="dropdown" ng-click="changeColor2(true)"><img src="{{imagename}}"/></div>
   <ul class="dropdown-menu">
-    <li style="font-color:#efefef";"><a  style="font-color:#efefef";" href="#" ng-click="changeColor2(false)">HTML</a></li>
-    <li style="color:#efefef;"><a href="#" ng-click="changeColor2(false)">CSS</a></li>
-    <li><a href="#" ng-click="changeColor2(false)">JavaScript</a></li>
+    <li style="font-color:#efefef";"><a  style="font-color:#efefef";" href="#myself" ng-click="changeColor2(false)">WHO AM I</a></li>
+    <li style="color:#efefef;"><a href="#education" ng-click="changeColor2(false)">EDUCATION</a></li>
+    <li><a href="#proj" ng-click="changeColor2(false)">PROJECTS</a></li>
+    <li><a href="#exp" ng-click="changeColor2(false)">WORK EXPERIENCE</a></li>
+    
   </ul></div>
 </div>
 
@@ -103,57 +149,143 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5A6291', end
 <img style="margin-left: 38%" src="{{imagePath}}" class="img-circle"/>
 </div>
 
-<div class="bodydiv">
+<div id="myself" class="bodydiv">
 <p class="bodyfont">System.out.println("Hello World! I am a programmer.");</p>
 <p class="bodyfont">&nbsp</p>
 <p class="bodyfont">if(you.equals("programmer")&nbsp &nbsp{</p>
 <p class="bodyfont">&nbsp</p>
 <p class="bodyfont">AlertDialog.Builder mes = new AlertDialog.Builder(this);</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">mes.setMessage("We are Friends!");&nbsp &nbsp}</p>
+<p class="bodyfont">mes.setMessage("We are Awesome!");&nbsp &nbsp</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">String [] myLikes&nbsp &nbsp =&nbsp &nbsp {'coding','coffee','gaming','travel'};</p>
+<p class="bodyfont">mes.show();&nbsp &nbsp }</p>
+<p class="bodyfont">&nbsp</p>
+<p class="bodyfont">String [] myLikes&nbsp &nbsp =&nbsp &nbsp {'android','coding','coffee','gaming','travel'};</p>
 <p class="bodyfont">&nbsp</p>
 <p class="bodyfont">String myFavProgLang &nbsp &nbsp =&nbsp &nbsp "JAVA";</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">String myFavProject&nbsp &nbsp =&nbsp &nbsp<a href="">Medion</a></p>
+<p class="bodyfont">String myBigProject&nbsp &nbsp =&nbsp &nbsp<a href="https://github.com/stephenpaul2727/Medion" target="_blank">Medion</a>;</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">String myResume&nbsp &nbsp =&nbsp &nbsp <a href="">resume</a></p>
+<p class="bodyfont">String myResume&nbsp &nbsp =&nbsp &nbsp <a href="">Resume</a>;</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">String myGit&nbsp &nbsp =&nbsp &nbsp <a href="https://github.com/stephenpaul2727">GIT</a></p>
+<p class="bodyfont">String myGit&nbsp &nbsp =&nbsp &nbsp <a href="https://github.com/stephenpaul2727" target="_blank">Github</a>;</p>
+</div>
+<div class="Education" id="education">
+<h2 style="margin-left:10px;">
+Education
+<hr style="border:1px solid #949aa3;margin-right:10px;">
+</h2>
+<div class="univimage">
+<img src="images/iu.png" class="img-circle"></div>
+<div class="edudetails">
+<h4>INDIANA UNIVERSITY Bloomington, Indiana<p style="float:right;font-size:14px;">May 2018</p></h4>
+<p>Master of Sciences in Computer Science</p>
+</div>
+</div>
 
-
-
-
+<div class="Education2">
+<h2 style="margin-left:10px;">
+</h2>
+<div class="univimage" style="margin-top:15px;">
+<img src="images/gitam.jpg" class="img-circle"></div>
+<div class="edudetails" style="margin-top:15px;">
+<h4>GITAM UNIVERSITY Visakhapatnam India<p style="float:right;font-size:14px;">May 2016</p></h4>
+<p>Bachelor of Technology in Computer Science and Engineering</p>
+<p>88% (First class with Distinction)</p>
 
 </div>
-<script>
-var navang = angular.module("app1",[]);
-navang.controller("navbarcontroller",function($scope){
-	$scope.name="STEPHEN PAUL ADITHELA";	
+</div>
 
-			$scope.changeColor2=function(bool){
-				if(bool===true)
-					{$scope.imagename="images/first.gif";
-					
-					}
-				else if(bool===false)
-					{$scope.imagename = "images/second.gif";
-					}
-				};
+<div class="Project1" id="proj" style="background-color: #9dadc6;">
+<h2 style="margin-left:10px;">
+Projects
+<hr style="border:1px solid #949aa3;margin-right:10px;">
+<h2 style="margin-left:10px;">
+</h2>
+<div class="univimage" style="margin-top:15px;">
+<img src="images/proj1logo.png" ></div>
+<div class="edudetails" style="background-color:#efefef; margin-top:15px;">
+<h4>Medion (Android Application)<p style="float:right;font-size:14px;">~December 2016</p></h4>
+<p>Dynamic Android Application to enable users schedule meet</p>
+<p>Developed this Application as a group of 5 people including me.</p>
+<p>Application's server is hosted online at <a href="https://www.whispering-everglades-62915.herokuapp.com" target="_blank">heroku</a></p>
+<p>Main technologies used for this application are as follows:</p>
+<img src="images/java.png"/>&nbsp;&nbsp;&emsp;<img src="images/springboot.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/heroku.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/maps.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/android.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/postgres.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/rest1.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/firebase.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/jira.png"/>
+</div>
+</div>
 
-	
-});
+<div class="Project1" style="height:420px;background-color: #9dadc6;">
 
-</script>
-<script>
-var bodyang = angular.module("profileApp",[]);
-bodyang.controller("profileController",function($scope){
-$scope.imagePath="images/stevepic.jpg";
-$scope.name="STEPHEN PAUL ADITHELA";	
-});
-angular.bootstrap(document.getElementById("app2"),['profileApp']);
-</script>
+<div class="univimage" style=" margin-top:30px;">
+<img style="margin-left:30px;" src="images/btown.png"></div>
+<div class="edudetails" style="float:right; margin-right:5px;background-color:#efefef; margin-top:15px;">
+<h4>BTownGadgets<p style="float:right;font-size:14px;">November 2016</p></h4>
+<p>Developed an interactive Dynamic web application to allow users to rent gadgets in Bloomington.</p>
+<p>Developed this Application as a group of 3 people.</p>
+<p>Application's server is hosted online at <a href="http://btowngadgets.herokuapp.com" target="_blank">heroku</a></p>
+<p>Technologies used for this application are as follows:</p>
+<p>&nbsp;</p>
+<img src="images/java.png"/>&nbsp;&nbsp;&emsp;<img src="images/springboot.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/bootstrap.jpg"/>&nbsp;&nbsp;&emsp;
+<img src="images/heroku.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/postgres.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/maven.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/github.png"/>
+</div>
+</div>
+
+
+
+<div class="Project1" style="height:430px;background-color: #9dadc6;">
+
+<div class="univimage" style=" margin-top:30px;">
+</div>
+<div class="edudetails" style="float:right; margin-right:5px;background-color:#efefef; margin-top:15px;">
+<h4>GameMaker<p style="float:right;font-size:14px;">Octoberr 2016</p></h4>
+<p>Collaborated with two other people to develop a Game Maker desktop application using Java Swing tools which allows user to make his own game.</p>
+<p>User can construct atari games using default models available in gamemaker design panel.</p>
+<p>User can save the game at any state and continue with the process later.</p>
+<p>Technologies used for this application are as follows:</p>
+<p>&nbsp;</p>
+<img src="images/java.png"/>&nbsp;&nbsp;&emsp;<img src="images/hibernate.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/jira.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/bamboo.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/maven.png"/>&nbsp;&nbsp;&emsp;
+<img src="images/sonarqube.png"/>
+</div>
+</div>
+
+
+<div class="Work" id="exp">
+<h2 style="margin-left:10px;color:#68829e">
+Work Experience
+<hr style="border:1px solid #68829e;margin-right:10px;">
+<h2 style="margin-left:10px;">
+</h2>
+<div class="univimage" style="margin-top:15px;">
+<img src="images/hcl.png" ></div>
+<div class="edudetails" style="background-color:#bfc4cc;height:400px;color:#00000;margin-top:15px;">
+<h4>Online Study Portal    (Summer Intern)<p style="float:right;font-size:14px;">Summer 2015</p></h4>
+<p>This website is focused on providing the knowledge database for various fields of study.</p>
+<p>Designed website with a team of 4 people.</p>
+<p>User can take tests on certain courses on the website to check himself.</p>
+<p>Technologies used for this application are as follows:</p>
+<p>&nbsp;</p>
+<img src="images/html.png"/>&nbsp;&emsp;&nbsp;&emsp;<img src="images/php.png"/>&nbsp;&emsp;&nbsp;&emsp;
+<img src="images/javascript.png"/>&nbsp;&emsp;&nbsp;&emsp;
+<img src="images/phpmyadmin.png"/>&nbsp;&emsp;&nbsp;&emsp;
+
+</div>
+</div>
+
+<script src="angularCode.js"></script>
 
 </body>
 </html>
