@@ -14,161 +14,55 @@
 <link href='//fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Maven Pro' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico|Poiret+One" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 <script src="plainJavaScript.js"></script>
 
-<style>
-p.bodyfont{
-    font-family: 'Lekton';
-    color:#959faf;
-    font-size:15px;
-    margin-left:15px;
-    margin-top:5px;
-
-}
-p.navfont{
-font-size:15px;
-margin-top:20px;
-position: fixed;
-color:#5b5b5b;
-}
-
-div.col-md-1{
-height:55px;
-margin-left:0px;
-}
-div.navbar {
-width:100%;
-height:57px;
-position: fixed;
-top:0;
-background-color:#262423;
-}
-div.bodydiv {
-width:100%;
-border: 1px solid #a7a8aa;
-height:auto;
-margin: auto;
-background-color:#262423;
-}
-ul.dropdown-menu{
-width:200px;
-background-color:#d0d8e5;
-margin-top:58px;
-margin-left:85%;
-}
-div.profilediv{
-margin:auto;
-font-family:Lucida Sans Unicode", "Lucida Grande", sans-serif;
-height:auto;
-padding: 10px;
-padding-top:5%;
-}
-div.Education{
-width:100%;
-height:250px;
-font-family:'Maven Pro';
-color:#5d5f60;
-background-color:#e3e6ea;
-border: 1px solid #a7a8aa;
-}
-div.Education2{
-width:100%;
-height:220px;
-font-family:'Maven Pro';
-color:#5d5f60;
-background-color:#e3e6ea;
-border: 1px solid #a7a8aa;
-}
-div.Work{
-width:100%;
-height:570px;;
-font-family:'Maven Pro';
-color:#dbd5d2;
-background-color:#505160;
-border: 1px solid #a7a8aa;
-}
-div.Project1{
-width:100%;
-height:570px;;
-font-family:'Maven Pro';
-color:#5d5f60;
-background-color:#e3e6ea;
-border: 1px solid #a7a8aa;
-}
-div.univimage{
-margin-left:10px;
-float:left;}
-div.projdetails{
-width;100%;
-height:250px;
-
-}
-imgcircle{
-border-radius:30%;}
-div.edudetails{
-float:left;
-padding-bottom: 100%;
-margin-bottom: -100%;
-border-radius: 10px;
-border: 2px solid #949aa3;
-padding: 20px; 
-margin-left:20px;
-color:#000000;
-width: 90%;
-height: auto;  
-background-color:#949aa3;}
-body{
-background: -moz-linear-gradient(270deg, rgba(90,98,145,1) 0%, rgba(0,128,128,1) 100%); /* ff3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(90,98,145,1)), color-stop(100%, rgba(0,128,128,1))); /* safari4+,chrome */
-background: -webkit-linear-gradient(270deg, rgba(90,98,145,1) 0%, rgba(0,128,128,1) 100%); /* safari5.1+,chrome10+ */
-background: -o-linear-gradient(270deg, rgba(90,98,145,1) 0%, rgba(0,128,128,1) 100%); /* opera 11.10+ */
-background: -ms-linear-gradient(270deg, rgba(90,98,145,1) 0%, rgba(0,128,128,1) 100%); /* ie10+ */
-background: linear-gradient(180deg, rgba(90,98,145,1) 0%, rgba(0,128,128,1) 100%); /* w3c */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5A6291', endColorstr='#008080',GradientType=0 ); /* ie6-9 */
-}
-</style>
+<link rel="stylesheet" href="mycss.css">
 
 <body class="body">
 <div ng-app ="app1" ng-controller="navbarcontroller" class="navbar">
-<div class="col-md-11" ><p style="margin-left:40%; margin-top:16px;font-family: 'Aldrich';font-size:20px;color:#bac2d1;">{{name}}</p></div>
-<div class="dropdown">
-<div class="col-md-1" style="margin-top:8px;" ng-init="imagename='images/up.png'" data-toggle="dropdown" ng-click="changeColor2(true)"><img src="{{imagename}}"/></div>
-  <ul class="dropdown-menu">
-    <li style="font-color:#efefef";"><a  style="font-color:#efefef";" href="#myself" ng-click="changeColor2(false)">WHO AM I</a></li>
-    <li style="color:#efefef;"><a href="#education" ng-click="changeColor2(false)">EDUCATION</a></li>
-    <li><a href="#proj" ng-click="changeColor2(false)">PROJECTS</a></li>
-    <li><a href="#exp" ng-click="changeColor2(false)">WORK EXPERIENCE</a></li>
+<div class="col-md-11" style="float:left;"><p style="margin-left:8%;text-align:center;margin-top:16px;font-family: 'Aldrich';font-size:20px;color:#bac2d1;">{{name}}</p></div><div class="dropdown">
+  
+  <div ng-init="imagename='images/down.png'" data-toggle="dropdown" ng-click="changeColor2(true)"><img style="cursor:pointer;float:right;margin-top:8px;"src="{{imagename}}"/></div>
+  <ul class="dropdown-menu" ng-mouseleave ="changeColor2(false)" style="float:left">
+    <li style="padding:5px; font-size:20px;font-color:#efefef;font-family: 'Poiret One', cursive;"><a  style="font-color:#efefef";" href="#myself" ng-click="changeColor2(false)">About me</a></li>
+    <li style="color:#efefef;padding:5px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#education" ng-click="changeColor2(false)">Education</a></li>
+    <li style="padding:5px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#proj" ng-click="changeColor2(false)">Projects</a></li>
+    <li style="padding:5px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#exp" ng-click="changeColor2(false)">Work Experience</a></li>
+    <li style="padding:5px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#exptech" ng-click="changeColor2(false)">Technical Skills</a></li>
     
   </ul></div>
+
+  
 </div>
 
 <div id="app2" class="profilediv" ng-controller="profileController">
-<img style="margin-left: 38%" src="{{imagePath}}" class="img-circle"/>
+<img style="margin-left: 40%" src="{{imagePath}}" class="img-circle"/>
 </div>
 
 <div id="myself" class="bodydiv">
-<p class="bodyfont">System.out.println("Hello World! I am a programmer.");</p>
+<p class="bodyfont">System.out.println("Hello World! I am a Programmer.");</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">if(you.equals("programmer")&nbsp &nbsp{</p>
+<p class="bodyfont">if(you.equals("programmer")&nbsp; &nbsp;{</p>
 <p class="bodyfont">&nbsp</p>
 <p class="bodyfont">AlertDialog.Builder mes = new AlertDialog.Builder(this);</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">mes.setMessage("We are Awesome!");&nbsp &nbsp</p>
+<p class="bodyfont">mes.setMessage("High Five!");&nbsp; &nbsp;</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">mes.show();&nbsp &nbsp }</p>
+<p class="bodyfont">mes.show();&nbsp; &nbsp; }</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">String [] myLikes&nbsp &nbsp =&nbsp &nbsp {'android','coding','coffee','gaming','travel'};</p>
+<p class="bodyfont">String [] myLikes&nbsp; &nbsp; =&nbsp; &nbsp; {'android','coding','coffee','gaming','travel'};</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">String myFavProgLang &nbsp &nbsp =&nbsp &nbsp "JAVA";</p>
+<p class="bodyfont">String myFavProgLang &nbsp; &nbsp; =&nbsp; &nbsp; "JAVA";</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">String myBigProject&nbsp &nbsp =&nbsp &nbsp<a href="https://github.com/stephenpaul2727/Medion" target="_blank">Medion</a>;</p>
+<p class="bodyfont">String myBigProject&nbsp; &nbsp; =&nbsp; &nbsp;<a href="https://www.github.com/stephenpaul2727/Medion" target="_blank">Medion</a>;</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">String myResume&nbsp &nbsp =&nbsp &nbsp <a href="">Resume</a>;</p>
+<p class="bodyfont">String myResume&nbsp; &nbsp; =&nbsp; &nbsp; <a href="Pdfs/asp resume new.pdf" target="_blank">Resume</a>;</p>
 <p class="bodyfont">&nbsp</p>
-<p class="bodyfont">String myGit&nbsp &nbsp =&nbsp &nbsp <a href="https://github.com/stephenpaul2727" target="_blank">Github</a>;</p>
+<p class="bodyfont">String myGit&nbsp; &nbsp; =&nbsp; &nbsp; <a href="https://www.github.com/stephenpaul2727" target="_blank">Github</a>;</p>
 </div>
 <div class="Education" id="education">
 <h2 style="margin-left:10px;">
@@ -264,7 +158,7 @@ Projects
 
 
 <div class="Work" id="exp">
-<h2 style="margin-left:10px;color:#68829e">
+<h2 style="margin-left:10px;color:#68829e;background-color:#">
 Work Experience
 <hr style="border:1px solid #68829e;margin-right:10px;">
 <h2 style="margin-left:10px;">
@@ -285,6 +179,71 @@ Work Experience
 </div>
 </div>
 
+
+
+<div class="Technical" id="exptech">
+<h2 style="color:#68829e;margin-left:15px;">
+Technical Skills
+<hr style="border:1px solid #68829e;margin-right:10px">
+</h2>
+<table style="font-family:'Bungee Hairline';width:100%;font-size:20px;color:#efefef;">
+<tr>
+<td style="width:20%;">JAVA</td>
+<td ><div class="container-fluid">
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+    </div>
+  </div>
+</div>
+</td>
+</tr><tr>
+<td style="width:20%;">ANDROID</td>
+<td><div class="container-fluid"><div class="progress">
+    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+    </div>
+  </div>
+  </div>
+  </td>
+</tr><tr>
+<td style="width:20%;">HTML5</td>
+<td><div class="container-fluid"><div class="progress">
+    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+    </div>
+  </div>
+  </div>
+  </td>
+</tr><tr>
+<td style="width:20%;">JAVASCRIPT</td>
+<td><div class="container-fluid"><div class="progress">
+    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+    </div>
+  </div>
+  </div>
+</td>
+</tr><tr>
+<td style="width:20%;">ANGULAR JS</td>
+<td><div class="container-fluid"><div class="progress">
+    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+    </div>
+  </div>
+  </div>
+  </td>
+</tr><tr>
+<td style="width:20%;">SPRING MVC</td>
+<td><div class="container-fluid"><div class="progress">
+    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+    </div>
+  </div>
+  </div>
+</td>
+
+</table>
+
+</div>
+
+<div class="footer"style="text-align:center;">
+<p style="padding-top:2%;font-size:30px;font-family:'Pacifico', cursive;"> stephen paul adithela</p>
+</div>
 <script src="angularCode.js"></script>
 
 </body>
