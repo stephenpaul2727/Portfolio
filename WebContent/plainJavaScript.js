@@ -6,14 +6,6 @@ $(document).on('click', 'a', function(event){
 });
 
 
-//$(window).scroll(function() {
-//
-//    if ($(this).scrollTop()>20)
-//     {
-//        $('.navbar').fadeOut();
-//     }
-//    else
-//     {
-//      $('.navbar').fadeIn();
-//     }
-// });
+$(document).ready(function(){
+    $(".dropdown-toggle").dropdown("toggle");
+});

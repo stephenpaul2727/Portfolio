@@ -4,20 +4,17 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <title>Stephen Paul</title></head>
-<script language="javascript">
+
+
+<script type='text/javascript'>
+
 var uagent = navigator.userAgent.toLowerCase();
 function DetectPhone()
 {
 if(uagent.search("iphone")> -1 || uagent.search("android")>-1)
 	{
-	alert("Please open this website in a desktop for maximum stability!");}
-}
+	alert("Please open this website in a desktop for maximum stability!");
 window.onload= function(){
-	if(screen.width<=480)
-		{
-		alert("Please open this website in a desktop for maximum stability!");
-		}
-	
 	DetectPhone();
 }
 
@@ -25,8 +22,7 @@ window.onload= function(){
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <link href='//fonts.googleapis.com/css?family=Bungee Hairline' rel='stylesheet'>
@@ -38,7 +34,6 @@ window.onload= function(){
 <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico|Poiret+One" rel="stylesheet">
 
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 <script src="plainJavaScript.js"></script>
@@ -46,23 +41,38 @@ window.onload= function(){
 <link rel="stylesheet" href="mycss.css">
 
 <body class="body">
-<div ng-app ="app1" ng-controller="navbarcontroller" class="navbar">
-<div class="col-md-11" style="float:left;"><p style="margin-left:8%;text-align:center;margin-top:16px;font-family: 'Aldrich';font-size:20px;color:#bac2d1;">{{name}}</p></div><div class="dropdown">
+
+
+<script>
+$(document).ready(function(){
+$('.dropdown').on('show.bs.dropdown', function() {
+  $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+});
+$('.dropdown').on('hide.bs.dropdown', function() {
+  $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+});
+});
+</script>
+
+<div ng-app ="app1" ng-controller="navbarcontroller" onmouseover="this.style.background='#0a0a0a';" onmouseout="this.style.background='#262423';" class="navbar">
+<div class="dropdown">
+<div class="dropdown-toggle" data-toggle="dropdown"  style="cursor:pointer;float:center;"><p style="text-align:center;margin-top:16px; font-family: 'Aldrich';font-size:20px;color:#bac2d1;">{{name}}</p></div>
   
-  <div ng-init="imagename='images/down.png'" data-toggle="dropdown" ng-click="changeColor2(true)"><img style="cursor:pointer;float:right;margin-top:8px;"src="{{imagename}}"/></div>
-  <ul class="dropdown-menu" ng-mouseleave ="changeColor2(false)" style="float:left">
-    <li style="padding:5px; font-size:20px;font-color:#efefef;font-family: 'Poiret One', cursive;"><a  style="font-color:#efefef";" href="#myself" ng-click="changeColor2(false)">About me</a></li>
-    <li style="color:#efefef;padding:5px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#education" ng-click="changeColor2(false)">Education</a></li>
-    <li style="padding:5px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#proj" ng-click="changeColor2(false)">Projects</a></li>
-    <li style="padding:5px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#exp" ng-click="changeColor2(false)">Work Experience</a></li>
-    <li style="padding:5px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#exptech" ng-click="changeColor2(false)">Technical Skills</a></li>
-    
-  </ul></div>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu" style="background-color:#8aa7cc;margin-top:1%;margin-right:0%;">
+    <li style="padding:8px; font-size:20px;font-color:#efefef;font-family: 'Poiret One', cursive;"><a  style="font-color:#efefef";" href="#myself">About me</a></li>
+    <li style="color:#efefef;padding:8px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#education">Education</a></li>
+    <li style="padding:8px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#proj" >Projects</a></li>
+    <li style="padding:8px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#exp" >Work Experience</a></li>
+    <li style="padding:8px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#exptech" >Technical Skills</a></li>
+   
+  </ul>
 
   
 </div>
+</div>
 
 <div id="app2" class="profilediv" ng-controller="profileController">
+
 <img style="margin-left: 40%" src="{{imagePath}}" class="img-circle"/>
 </div>
 
