@@ -56,9 +56,9 @@ $('.dropdown').on('hide.bs.dropdown', function() {
 
 <div ng-app ="app1" ng-controller="navbarcontroller" onmouseover="this.style.background='#222d3d';" onmouseout="this.style.background='#000000';" class="navbar">
 <div class="dropdown">
-<div class="dropdown-toggle" data-toggle="dropdown"  style="cursor:pointer;float:center;"><p style="text-align:center;margin-top:16px; font-family: 'Aldrich';font-size:20px;color:#bac2d1;">{{name}}</p></div>
+<div class="dropdown-toggle" data-toggle="dropdown"  style="cursor:pointer;float:center;"><p style="text-align:center;margin-top:16px; font-family: 'Aldrich';font-size:20px;color:#BEB9B5;">{{name}}</p></div>
   
-  <ul class="dropdown-menu dropdown-menu-right" role="menu" style="background-color:#8aa7cc;margin-top:1%;margin-right:0%;">
+  <ul class="dropdown-menu dropdown-menu-right" role="menu" style="width:100%;background-color:#8aa7cc;margin-top:1%;margin-right:0%;">
     <li style="padding:8px; font-size:20px;font-color:#efefef;font-family: 'Poiret One', cursive;"><a  style="font-color:#efefef";" href="#myself">About me</a></li>
     <li style="color:#efefef;padding:8px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#education">Education</a></li>
     <li style="padding:8px; font-size:20px;font-family: 'Poiret One', cursive;"><a href="#proj" >Projects</a></li>
@@ -97,42 +97,47 @@ $('.dropdown').on('hide.bs.dropdown', function() {
 <p class="bodyfont">&nbsp</p>
 <p class="bodyfont">String myGit&nbsp; &nbsp; =&nbsp; &nbsp; <a href="https://www.github.com/stephenpaul2727" target="_blank">Github</a>;</p>
 </div>
+<h2></h2>
 <div class="Education" id="education">
-<h2 style="margin-left:10px;">
+<h1 style="text-align:center;">
 Education
-<hr style="border:1px solid #949aa3;margin-right:10px;">
-</h2>
+</h1>
+<hr style="border:1px solid #000000;margin-left:10px;margin-right:10px;">
 <div class="univimage">
-<img src="images/iu.png" class="img-circle"></div>
-<div class="edudetails">
-<h4>INDIANA UNIVERSITY Bloomington, Indiana<p style="float:right;font-size:14px;">May 2018</p></h4>
+<img src="images/iu.png" class="img-circle" style="display:block;margin:auto;"></div>
+<div class="edudetails" style="margin-top:15px;color:#BEB9B5">
+<h4>INDIANA UNIVERSITY Bloomington, Indiana<p style="font-size:14px;">May 2018</p></h4>
 <p>Master of Sciences in Computer Science</p>
 </div>
+<hr style="border:5px solid #FEF6EB;margin-right:10px;">
 </div>
 
 <div class="Education2">
 <h2 style="margin-left:10px;">
 </h2>
-<div class="univimage" style="margin-top:15px;">
-<img src="images/gitam.jpg" class="img-circle"></div>
-<div class="edudetails" style="margin-top:15px;">
+<div class="univimage">
+<img src="images/gitam.jpg" class="img-circle" style="display:block;margin:auto;"></div>
+<div class="edudetails" style="margin-top:15px;color:#BEB9B5">
 <h4>GITAM UNIVERSITY Visakhapatnam India<p style="float:right;font-size:14px;">May 2016</p></h4>
 <p>Bachelor of Technology in Computer Science and Engineering</p>
 <p>88% (First class with Distinction)</p>
 
 </div>
+<hr style="border:5px solid #FEF6EB;margin-right:10px;">
+
 </div>
 
-<div class="Project1" id="proj" style="width:100%;height:630px;background-color: #9dadc6;">
-<h2 style="margin-left:10px;">
+<div class="Project1" id="proj" style="background-color: #9dadc6;">
+<h2 style="text-align:center;">
 Projects
-<hr style="border:1px solid #949aa3;margin-right:10px;">
+<hr style="border:1px solid #000000;margin-left:10px;margin-right:10px;">
 <h2 style="margin-left:10px;">
 </h2>
-<div class="univimage" style="margin-top:15px;">
-<img src="images/proj1logo.png" ></div>
-<div class="edudetails" style="background-color:#efefef; margin-top:15px;">
-<h4>Medion (Android Application)<p style="float:right;font-size:14px;">~December 2016</p></h4>
+<div class="univimage">
+<img src="images/proj1logo.png"  style="display:block;margin:auto;"></div>
+<div class="edudetails1" style=" margin-top:15px;">
+<h4>Medion (Android Application)<p style="float:right;font-size:14px;"></p></h4>
+<p>~December 2016</p>
 <p>Dynamic Android Application to enable users to rendezvous with your friends at the median of your team people's current locations.</p>
 <p>Application suggests a good restuarant in the locale to help you meet at that point.</p>
 <p>Admin can request server to find an another place in the locale if he is not satisfied with the result from our server.</p>
@@ -148,14 +153,17 @@ Projects
 <img src="images/firebase.png"/>&nbsp;&nbsp;&emsp;
 <img src="images/jira.png"/>
 </div>
+<h2></h2>
 </div>
 
-<div class="Project1" style="height:420px;background-color: #9dadc6;">
+<div class="Project1" style="background-color: #9dadc6;">
+<hr style="border:5px solid #9dadc6;margin-right:10px;">
 
-<div class="univimage" style=" margin-top:30px;">
-<img style="margin-left:30px;" src="images/btown.png"></div>
-<div class="edudetails" style="float:right; margin-right:5px;background-color:#efefef; margin-top:25px;">
-<h4>BTownGadgets<p style="float:right;font-size:14px;">November 2016</p></h4>
+<div class="univimage">
+<img src="images/btowngadgetslogo.png"  style="display:block;margin:auto;"></div>
+<div class="edudetails1" style=" margin-top:25px;">
+<h4>BTownGadgets<p style="float:right;font-size:14px;"></p></h4>
+<p>November 2016</p>
 <p>Developed an interactive Dynamic web application to allow users to rent gadgets in Bloomington.</p>
 <p>Developed this Application as a group of 3 people.</p>
 <p>Website is hosted online at <a href="http://btowngadgets.herokuapp.com" target="_blank">heroku</a></p>
@@ -168,17 +176,19 @@ Projects
 <img src="images/maven.png"/>&nbsp;&nbsp;&emsp;
 <img src="images/github.png"/>
 </div>
+<h2></h2>
 </div>
 
 
 
-<div class="Project1" style="height:430px;background-color: #9dadc6;">
+<div class="Project1" style="background-color: #9dadc6;">
+<hr style="border:5px solid #9dadc6;margin-right:10px;">
 
-<div class="univimage" style=" margin-top:20px;">
-<img style="margin-left:10px;" src="images/gamemaker.png">
-</div>
-<div class="edudetails" style="float:right; margin-right:5px;background-color:#efefef; margin-top:25px;">
-<h4>GameMaker<p style="float:right;font-size:14px;">October 2016</p></h4>
+<div class="univimage">
+<img src="images/gamemaker.png"  style="display:block;margin:auto;"></div>
+<div class="edudetails1" style=" margin-top:25px;">
+<h4>GameMaker</h4>
+<p>October 2016</p>
 <p>Collaborated with two other people to develop a Game Maker desktop application using Java Swing tools which allows user to make his own game.</p>
 <p>User can construct atari games using default models available in gamemaker design panel.</p>
 <p>User can save the game at any state and continue with the process later.</p>
@@ -190,19 +200,21 @@ Projects
 <img src="images/maven.png"/>&nbsp;&nbsp;&emsp;
 <img src="images/sonarqube.png"/>
 </div>
+<h2></h2>
 </div>
 
 
 <div class="Work" id="exp">
-<h2 style="margin-left:10px;color:#68829e;background-color:#">
-Work Experience
-<hr style="border:1px solid #68829e;margin-right:10px;">
-<h2 style="margin-left:10px;">
-</h2>
-<div class="univimage" style="margin-top:15px;">
-<img src="images/hcl.png" ></div>
-<div class="edudetails" style="background-color:#bfc4cc;height:400px;color:#00000;margin-top:15px;">
-<h4>Online Study Portal    (Summer Intern)<p style="float:right;font-size:14px;">Summer 2015</p></h4>
+<h2 style="color:#68829e;text-align:center;">
+Work Experience</h2>
+<hr style="border:1px solid #68829e;margin-left:10px;margin-right:10px;">
+
+<div class="univimage">
+<img src="images/hcl.png"  style="display:block;margin:auto;"></div>
+<hr style="border:3px solid #e3e6ea;">
+<div class="edudetails1">
+<h4>Online Study Portal    (Summer Intern)</h4>
+<p>Summer 2015</p>
 <p>This website is focused on providing the knowledge database for various fields of study.</p>
 <p>Designed website with a team of 4 people.</p>
 <p>User can take tests on certain courses on the website to check himself.</p>
@@ -213,16 +225,18 @@ Work Experience
 <img src="images/phpmyadmin.png"/>&nbsp;&emsp;&nbsp;&emsp;
 
 </div>
+<h2></h2>
+
 </div>
 
 
 
 <div class="Technical" id="exptech">
-<h2 style="color:#68829e;margin-left:15px;">
+<h2 style="color:#68829e;text-align:center;">
 Technical Skills
-<hr style="border:1px solid #68829e;margin-right:10px">
 </h2>
-<table style="font-family:'Bungee Hairline';width:100%;font-size:20px;color:#efefef;">
+<hr style="border:1px solid #68829e;margin-left:10px;margin-right:10px">
+<table style="font-family:'Bungee Hairline';width:80%;margin:auto;font-size:20px;color:#efefef;">
 <tr>
 <td style="width:20%;">JAVA</td>
 <td ><div class="container-fluid">
