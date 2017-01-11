@@ -18,8 +18,8 @@ width:100%;
 height:auto;;
 font-family:'Maven Pro';
 color:#505160;
-background-color:  #000000;
-border: 1px solid  #000000;
+background-color:  #262423;
+border: 1px solid  #262423;
 }
 div.navbar {
 display:block; width:100%;padding:0;border-width:0
@@ -118,6 +118,7 @@ border: 2px solid #949aa3;
 padding: 20px; 
 color:#BEB9B5;
 text-align:center;
+font-family: 'Exo 2', sans-serif;
 width: 90%;
 height: auto;  
 margin:auto;
