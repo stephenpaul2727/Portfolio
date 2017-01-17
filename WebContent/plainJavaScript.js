@@ -4,8 +4,3 @@ $(document).on('click', 'a', function(event){
         scrollTop: $( $.attr(this, 'href') ).offset().top-56
     }, 1000);
 });
-
-
-$(document).ready(function(){
-    $(".dropdown-toggle").dropdown("toggle");
-});
