@@ -16,11 +16,11 @@ color:#5b5b5b;
 }
 div.Technical{
 width:100%;
-height:auto;;
+height:auto;
 font-family:'Maven Pro';
-color:#505160;
-background-color:  #262423;
-border: 1px solid  #262423;
+color:#000000;
+background-color:  #9ba9c1;
+border: 1px solid  #9ba9c1;
 }
 .dropdown-menu > li{
   display: inline-block;
@@ -33,9 +33,16 @@ div.navbar {
 display:block; width:100%;padding:0;border-width:0
 height:57px;
 position: fixed;
+-webkit-transition-timing-function: ease;
+transition-timing-function: ease;
 top:0px;
+-webkit-transition: height 2s; /* Safari */
+transition: height 2s;
+-webkit-transition-timing-function: ease;
+transition-timing-function: ease;
 background-color: #000000;
 }
+
 div.bodydiv {
 width:80%;
 border: 1px solid #a7a8aa;
@@ -71,8 +78,8 @@ height:auto;
 font-family:'Maven Pro';
 margin:auto;
 color:#5d5f60;
-background-color:#FEF6EB;
-border: 1px solid #FEF6EB;
+background-color:#d6d4d1;
+border: 1px solid #d6d4d1;
 }
 div.Education2{
 width:100%;
@@ -80,8 +87,8 @@ height:auto;
 margin:auto;
 font-family:'Maven Pro';
 color:#5d5f60;
-background-color:#FEF6EB;
-border: 1px solid #a7a8aa;
+background-color:#d6d4d1;
+border: 1px solid #d6d4d1;
 }
 div.footer{
 width:100%;
@@ -102,8 +109,8 @@ height:auto;;
 margin:auto;
 font-family:'Maven Pro';
 color:#5d5f60;
-background-color: #9dadc6;
-border: 1px solid #9dadc6;
+background-color: #eaebf7;
+border: 1px solid #eaebf7;
 }
 div.univimage{
 margin:0 auto;
@@ -130,32 +137,30 @@ margin-bottom: -100%;
 border-radius: 10px;
 border: 2px solid #949aa3;
 padding: 20px; 
-color:#BEB9B5;
+color:#000000;
 text-align:center;
 font-family: 'Exo 2', sans-serif;
 width: 90%;
 height: auto;  
 margin:auto;
-background-color:#525564;}
+background-color:#ffffff;}
 imgcircle{
 border-radius:30%;}
 div.edudetails{
 padding-bottom: 100%;
 margin-bottom: -100%;
 border-radius: 10px;
-border: 2px solid #FEF6EB;
+border: 2px solid #949aa3;
+box-shadow: 10px 10px 5px #888888;
 text-align:center;
 padding: 20px; 
 margin:auto;
-color:#BEB9B5;
+color:#000000;
 width: 50%;
 height: auto;  
-background-color:#525564;}
+background-color:#ffffff;}
+
 body{
-background: -moz-linear-gradient(90deg, rgba(36,58,82,1) 0%, rgba(145,93,115,1) 100%); /* ff3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(145,93,115,1)), color-stop(100%, rgba(36,58,82,1))); /* safari4+,chrome */
-background: -webkit-linear-gradient(90deg, rgba(36,58,82,1) 0%, rgba(145,93,115,1) 100%); /* safari5.1+,chrome10+ */
-background: -o-linear-gradient(90deg, rgba(36,58,82,1) 0%, rgba(145,93,115,1) 100%); /* opera 11.10+ */
-background: -ms-linear-gradient(90deg, rgba(36,58,82,1) 0%, rgba(145,93,115,1) 100%); /* ie10+ */
-background: linear-gradient(0deg, rgba(36,58,82,1) 0%, rgba(145,93,115,1) 100%); /* w3c */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#915D73', endColorstr='#243A52',GradientType=0 ); /* ie6-9 */}
+	background-image: url("images/wall1.jpg");
+	
+}

@@ -4,3 +4,8 @@ $(document).on('click', 'a', function(event){
         scrollTop: $( $.attr(this, 'href') ).offset().top-56
     }, 1000);
 });
+
+function changeImage()
+{
+document.getElementById("iu").src=="images/iublur.jpg"	
+}
