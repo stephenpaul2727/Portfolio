@@ -11,3 +11,4 @@ navang.controller("navbarcontroller",function($scope){
 
 	
 });
+angular.bootstrap(document.getElementById("app2"),['profileApp']);
