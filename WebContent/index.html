@@ -44,17 +44,6 @@ window.onload= function(){
 <body class="body">
 
 
-<script>
-$(document).ready(function(){
-$('.dropdown').on('show.bs.dropdown', function() {
-  $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-});
-$('.dropdown').on('hide.bs.dropdown', function() {
-  $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
-});
-});
-</script>
-
 <div ng-app ="app1" ng-controller="navbarcontroller" onmouseover="this.style.background='#222d3d';" onmouseout="this.style.background='#000000';" class="navbar">
 <div class="dropdown">
 <div class="dropdown-toggle" data-toggle="dropdown"  style="cursor:pointer;float:center;"><p style="text-align:center;margin-top:16px; font-family: 'Aldrich';font-size:20px;color:#BEB9B5;">{{name}}</p></div>
