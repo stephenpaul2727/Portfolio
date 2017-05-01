@@ -29,7 +29,7 @@ initialize()
     return
 }
 
-A(Sem s)
+A(Sem C)
 {
     C->value--;
     if(C>value < 0)
@@ -37,7 +37,7 @@ A(Sem s)
     return
 }
 
-B(s)
+B(C)
 {
     C->value++;
     if(C->value <= 0)
