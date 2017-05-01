@@ -23,9 +23,9 @@ angular.bootstrap(document.getElementById("app2"),['profileApp']);
 
 
 //Initializing semaphore
-initialize(i)
+initialize()
 {
-    C->value = 1
+    C->value = 1;
     return
 }
 
